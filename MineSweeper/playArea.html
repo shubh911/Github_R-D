@@ -1,0 +1,14 @@
+<table>
+<tr ng-repeat = 'x in matrix' class = 'rows'>
+	<td ng-repeat = 'y in x' class = 'buttons' ng-class = 'y.cssClass' ng-disabled = 'y.disable'>
+		<registry class = 'registry' value = 'y' matrix = 'matrix' remainingMines= 'remainingMines'></registry>
+	</td>
+</tr>
+</table>
+<div ng-repeat = 'x in matrix' ng-show = 'cheatcode'>
+
+<span ng-repeat = 'y in x'>
+	{{y.value}}
+</span>
+
+</div>
