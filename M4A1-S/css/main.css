@@ -1,0 +1,46 @@
+.head{
+	background-color:yellow;
+}
+.tail{
+	background-color:skyblue;
+}
+*{
+	box-sizing: border-box;
+	/* font-size: 5px; */
+}
+.borderNotOnEdge{
+	background-color: black;
+}
+.bodyParts{
+	background-color:grey;
+	
+}
+.playBoard table{
+	width: 80%;
+	padding-left:10%;
+	padding-top: 10%;
+	border-collapse: collapse;
+}
+.playBoard tr{
+	height: 10px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+.playBoard tr td{
+	width: 10px;
+	height: 100%;
+	
+}
+.playBoard tr td span{
+	width:100%;
+	height: 100%;
+	display: inline-block;
+}
+.blankBox{
+	background-color:white;
+}
+
+.bait{
+	background-color:red;
+}

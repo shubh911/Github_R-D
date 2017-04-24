@@ -1,0 +1,86 @@
+<html ng-app = 'myApp'>
+	<head>
+		<script src = 'angular.js'></script>
+		<script src = 'main.js'></script>
+		 
+		<style>
+		*{
+			box-sizing: border-box;
+		}
+		.Arena{
+			width: 90%;
+			height: 90%;
+			margin-left: 5%;
+		}
+		.playArea table{
+			background: linear-gradient(white,blue);
+			border-collapse: collapse;
+		}
+		.playArea table tr{
+			background: linear-gradient(white,blue);
+		}
+		.playArea table tr{
+			background: linear-gradient(white,blue);
+		}
+			.buttons{
+				
+				width: 50px;
+				height: 50px;
+				border: 1px solid green;
+				background-color: grey;
+			}
+			.rows{
+				display: block;
+				height: 50px;
+				font-size: 25px;
+				
+			}
+			.buttonsdisabled{
+				cursor: not-allowed;
+			}
+			.mines{
+				background-image: url(minesphoto.svg);
+			}
+			
+			.blank{
+				background-color: #fff;
+			}
+			.registry{
+				text-align: center;
+				padding-top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class = 'Arena' ng-controller = 'myController'>
+			<div>
+				Enter rows and columns.
+			</div>
+			<div>
+				Rows: <input ng-model = 'userInput.rows' type='number' />
+				Cols: <input ng-model = 'userInput.cols' type='number' />
+				Mines: <input ng-model = 'userInput.minesCount' type ='number' />
+				
+				<input type = 'button' ng-click = 'generatePlayArea()' value = 'Play' />
+			</div>
+			<div>
+				<span>
+					Number of Mines Remaining :
+						<span>{{remainingMines.remaining}}</span>
+				</span>
+				<span>Time: {{time.mm +' : '+time.sec }}</span>
+			</div>
+			<!-- PLAY AREA -->
+			<play-area matrix = 'matrix' class = 'playArea' remainingMines = 'remainingMines'>
+				
+			</play-area>
+			
+			
+			<!-- CHEAT CODE SECTION -->
+			<div>
+				
+			</div>
+		</div>
+	</body>
+</html>

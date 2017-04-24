@@ -1,0 +1,15 @@
+<div class = 'options'>
+			<div>
+				<input type = 'range' ng-model = 'speed' ng-change = 'speedChange()'/>
+				<span>Speed: {{speed}} </span>
+			</div>
+		</div>
+<div class = 'playBoard'>
+	<table>
+		<tr ng-repeat = 'rows in matrix'>
+			<td ng-repeat = 'cols in rows' ng-class = 'cols.cssClass' >
+				
+			</td>
+		</tr>
+	</table>
+</div>
